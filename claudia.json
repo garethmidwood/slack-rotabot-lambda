@@ -1,0 +1,11 @@
+{
+  "lambda": {
+    "role": "slack-rota-bot-executor",
+    "name": "slack-rota-bot",
+    "region": "eu-west-2"
+  },
+  "api": {
+    "id": "4eutc9qtyh",
+    "module": "bot"
+  }
+}
