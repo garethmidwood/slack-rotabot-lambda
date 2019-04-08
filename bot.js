@@ -43,23 +43,7 @@ api.intercept((event) => {
     return event;
 
   console.log('in the intercept');
-
-  // var awesomeCallback = function(message, response) {
-  //   console.log('called awesomeCallback with a response of...');
-  //   console.log(response);
-
-  //   return slackDelayedReply(message, {
-  //     text: `${response}`,
-  //     response_type: 'in_channel'
-  //   })
-  // };
-
   const message = event.slackEvent;  
-  // console.log('passing the message to the rota object');
-  // let oRota = new rota(message);
-
-  // oRota.process();
-
   console.log('passing the message to the rota object');
   let oRota = new rota(message);
   let DDBRequestPromise = oRota.process();
@@ -74,11 +58,6 @@ api.intercept((event) => {
     })
   })
   .then(() => false); // prevent normal execution
-
-  // rotaPromise.then((data) => false); // prevent normal execution
-  // console.log(rotaPromise);
-
-  // return rotaPromise;
 });
 
 module.exports = api;
