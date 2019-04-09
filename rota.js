@@ -53,7 +53,7 @@ class rota {
     /*
      * Directs rota requests to the correct handler function
      */
-    process(awesomeCallback) {
+    process() {
         console.log('called rota process() function');
         var subCommand = this.getFirstWord(this.message.text);
         var args = this.message.text.replace(subCommand, '').trim();
